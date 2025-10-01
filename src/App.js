@@ -9,7 +9,9 @@ import OrderNotconfirmed from "./Components/OrderNotconfirmed";
 import Products from "./Components/Products";
 import FeaturesProducts from "./Components/FeaturesProducts";
 import NewsProducts from "./Components/NewsProducts";
-
+import Users from "./Components/Users";
+import UserDetails from "./Components/UserDetails";
+import AdminDetails from "./Components/AdminDetails";
 function App() {
   return (
     <div className="App">
@@ -33,9 +35,21 @@ function App() {
         <Route path="/OrderNotconfirmed" element={<OrderNotconfirmed />} />
 
         <Route path="/Products" element={<Products />}>
+          <Route index element={<FeaturesProducts/>} />
           <Route path="/ProductsFeatures" element={<FeaturesProducts/>} />
           <Route path="/ProductsNews" element={<NewsProducts/>} />
         </Route>
+          <Route path="/Users" element={<Users/>}  >
+          
+             <Route path=":userId" element={<UserDetails/>}    />
+          <Route  path="Admin" element={<AdminDetails/>} />
+          
+          </Route>
+       
+         
+
+
+
       </Routes>
     </div>
   );
