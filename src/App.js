@@ -41,12 +41,12 @@ function App() {
         </Route>
           <Route path="/Users" element={<Users/>}  >
           
-             <Route path=":userId" element={<UserDetails/>}    />
+            <Route path=":userId" element={<UserDetails/>}    />
           <Route  path="Admin" element={<AdminDetails/>} />
           
           </Route>
-       
-         
+      
+        
 
 
 
